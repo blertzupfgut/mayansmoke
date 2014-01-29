@@ -96,20 +96,23 @@ if hlexists('MayanSmokeSearch')
     hi link IncSearch MayanSmokeSearch
     hi link Search MayanSmokeSearch
 elseif exists('g:mayansmoke_search_visibility') && g:mayansmoke_search_visibility >= 4
-    hi IncSearch    guifg=white             guibg=red           gui=NONE
+    hi IncSearch    guifg=white             guibg=darkorange    gui=NONE
     hi Search       guifg=white             guibg=red           gui=NONE
 elseif exists('g:mayansmoke_search_visibility') && g:mayansmoke_search_visibility == 3
-    hi IncSearch    guifg=black             guibg=gold       gui=NONE
+    hi IncSearch    guifg=black             guibg=red         gui=NONE
     hi Search       guifg=black             guibg=gold        gui=NONE
 elseif exists('g:mayansmoke_search_visibility') && g:mayansmoke_search_visibility == 2
-    hi IncSearch    guifg=white             guibg=darkorange       gui=NONE
+    hi IncSearch    guifg=white             guibg=gold              gui=NONE
     hi Search       guifg=white             guibg=darkorange        gui=NONE
 elseif exists('g:mayansmoke_search_visibility') && g:mayansmoke_search_visibility == 0
-    hi IncSearch    guifg=black             guibg=tan         gui=NONE
+    hi IncSearch    guifg=black             guibg=darkorange  gui=NONE
     hi Search       guifg=black             guibg=tan         gui=NONE
 else
-    hi IncSearch    guifg=black             guibg=khaki          gui=NONE
+    hi IncSearch    guifg=black             guibg=tan            gui=NONE
     hi Search       guifg=black             guibg=khaki          gui=NONE
+endif
+if hlexists('MayanSmokeIncSearch')
+    hi link IncSearch MayanSmokeIncSearch
 endif
 hi LineNr       guifg=#666677           guibg=#cccfbf    gui=NONE
 hi MatchParen   guifg=black             guibg=LemonChiffon3     gui=bold
