@@ -18,7 +18,7 @@ let colors_name = "mayansmoke"
 
 "  Normal Color {{{1
 " =============================================================================
-hi Normal gui=NONE guifg=Black guibg=#F4F4E8
+hi Normal gui=NONE guifg=Black guibg=#FEF5CB
 " }}}
 
 "  Highlight Groups {{{1
@@ -80,7 +80,8 @@ elseif exists('g:mayansmoke_cursor_line_visibility') && g:mayansmoke_cursor_line
     hi CursorLine   guifg=NONE              guibg=white         gui=NONE
 else
     hi CursorColumn guifg=NONE              guibg=#FFFDD0       gui=NONE
-    hi CursorLine   guifg=NONE              guibg=#FFFDD0       gui=NONE
+    hi CursorLine   guifg=NONE              guibg=#E8E8E8       gui=NONE
+    hi CursorLineNr guifg=black             guibg=#E4E4E4       gui=bold
 endif
 hi CursorIM     guifg=bg                guibg=fg                gui=NONE
 hi lCursor      guifg=bg                guibg=fg                gui=NONE
@@ -111,10 +112,7 @@ else
     hi IncSearch    guifg=black             guibg=tan            gui=NONE
     hi Search       guifg=black             guibg=khaki          gui=NONE
 endif
-if hlexists('MayanSmokeIncSearch')
-    hi link IncSearch MayanSmokeIncSearch
-endif
-hi LineNr       guifg=#666677           guibg=#cccfbf    gui=NONE
+hi LineNr       guifg=#808080           guibg=#E4E4E4           gui=NONE
 hi MatchParen   guifg=black             guibg=LemonChiffon3     gui=bold
 hi ModeMsg      guifg=White             guibg=tomato1           gui=bold
 hi MoreMsg      guifg=SeaGreen4         guibg=bg                gui=bold
@@ -140,14 +138,14 @@ hi SpellBad     guisp=Firebrick2                                gui=undercurl
 hi SpellCap     guisp=Blue                                      gui=undercurl
 hi SpellLocal   guisp=DarkCyan                                  gui=undercurl
 hi SpellRare    guisp=Magenta                                   gui=undercurl
-hi StatusLine   guifg=#FFFEEE           guibg=#557788     gui=NONE
+hi StatusLine   guifg=#FFFEEE           guibg=#CE6C2B           gui=NONE
 " hi StatusLineNC guifg=#EAE6E2           guibg=LightSteelBlue3    gui=italic
-hi StatusLineNC guifg=#F4F4EE           guibg=#99aabb    gui=italic
+hi StatusLineNC guifg=#F4F4EE           guibg=#A55822           gui=italic
 hi TabLine      guifg=fg                guibg=LightGrey         gui=underline
-hi TabLineFill  guifg=fg                guibg=bg                gui=reverse
-hi TabLineSel   guifg=fg                guibg=bg                gui=bold
+hi TabLineFill  guifg=#A55822           guibg=LightGrey         gui=reverse
+hi TabLineSel   guifg=black             guibg=bg                gui=bold
 hi Title        guifg=DeepSkyBlue3      guibg=bg                gui=bold
-hi VertSplit    guifg=#99aabb     guibg=#99aabb
+hi VertSplit    guifg=#A55822           guibg=#A55822
 hi Visual       guifg=white             guibg=DeepSkyBlue1      gui=NONE
 hi WarningMsg   guifg=Firebrick2        guibg=bg                gui=NONE
 hi WildMenu     guifg=Black             guibg=SkyBlue           gui=NONE
@@ -249,17 +247,17 @@ hi WildMenu     ctermfg=16              ctermbg=117             cterm=NONE
 "       Debug          debugging statements
 "   *Error          any erroneous construct
 "   *Todo           anything that needs extra attention
-" hi Comment      guifg=#A2B5CD         guibg=NONE      gui=italic
-hi Comment      guifg=#96AAC2         guibg=NONE      gui=italic
-hi Constant     guifg=DarkOrange        guibg=NONE      gui=NONE
-    hi String   guifg=Aquamarine4       guibg=NONE      gui=NONE
-    hi Boolean  guifg=IndianRed4        guibg=NONE      gui=NONE
+hi Comment      guifg=SlateGray3        guibg=NONE      gui=NONE
+hi Constant     guifg=Chocolate         guibg=NONE      gui=NONE
+    hi String   guifg=Green4            guibg=NONE      gui=bold
+    hi Boolean  guifg=IndianRed4        guibg=NONE      gui=bold
+	hi Number   guifg=blue              guibg=NONE      gui=NONE
 hi Identifier   guifg=brown3            guibg=NONE      gui=NONE
 hi Function     guifg=VioletRed4        guibg=NONE      gui=NONE
-hi Statement    guifg=blue1             guibg=NONE      gui=NONE
-hi Keyword      guifg=DodgerBlue        guibg=NONE      gui=NONE
-hi PreProc      guifg=blue1             guibg=NONE      gui=NONE
-hi Type         guifg=LightSlateBlue    guibg=NONE      gui=NONE
+hi Statement    guifg=blue3             guibg=NONE      gui=bold
+hi Keyword      guifg=DodgerBlue2       guibg=NONE      gui=NONE
+hi PreProc      guifg=blue3             guibg=NONE      gui=NONE
+hi Type         guifg=blue3             guibg=NONE      gui=bold
 hi Special      guifg=DarkOliveGreen4   guibg=NONE      gui=NONE
 hi Ignore       guifg=bg                guibg=NONE      gui=NONE
 hi Error        guifg=Red               guibg=NONE      gui=underline
